@@ -1,0 +1,12 @@
+rabbitmq-server
+http://localhost:15672
+brew services start rabbitmq
+redis-browser
+
+WORKERS=PostsWorker rake sneakers:run
+
+
+upstream node_cluster {
+    server 127.0.0.1:3000;
+    server 127.0.0.1:4000;
+}

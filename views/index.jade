@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(name="add-estimation", method="post", action="come")
+    p
+      span.label RabbitMQ data
+    p
+      input(type="text", name="title")
+
+    br
+    p
+      span.label Kafka data
+    p
+      input(type="text", name="kafka")
+
+    p
+      input(type="submit", name="submit")
+
+    br
+    p
+      span.label Redis data
+    p
+      input(type="text", name="redis")
+
+    p
+      input(type="submit", name="submit")
